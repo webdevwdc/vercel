@@ -8,22 +8,22 @@ import PrivateOutlet from "./ShareModules/RouterWraper/PrivateOutlet";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Routes>
-        {/**************  Start public Route *********************/}
-        <Route path="/" element={<Index />} />
-
-        {/***************  End public Route  **********************/}
-
-        {/**************** Start Private Route *********************/}
-        {/* <Route path="/*" element={<PrivateOutlet />}>
-              <Route path="demo" element={<Demo />} />
-            </Route> */}
-        {/****************** End Private Route  *********************/}
-      </Routes>
-      <Footer />
-    </>
+    <div className="App">
+    <header className="App-header">
+      <img src={logo} className="App-logo" alt="logo" />
+      <p>
+        Edit <code>src/App.js</code> and save to reload.
+      </p>
+      <a
+        className="App-link"
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Learn React
+      </a>
+    </header>
+  </div>
   );
 }
 
