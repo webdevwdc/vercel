@@ -1,29 +1,29 @@
 
-
-// import { Route, Routes } from "react-router-dom";
-// import Header from "./ShareModules/Layout/Header/Header";
-// import Footer from "./ShareModules/Layout/Footer/Footer";
-// import Index from "./Components/Home/Index";
+import "./App.scss";
+import { Route, Routes } from "react-router-dom";
+import Header from "./ShareModules/Layout/Header/Header";
+import Footer from "./ShareModules/Layout/Footer/Footer";
+import Index from "./Components/Home/Index";
 // import PrivateOutlet from "./ShareModules/RouterWraper/PrivateOutlet";
 
 function App() {
   return (
-    <div className="App">
-    <header className="App-header">
-    
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </header>
-  </div>
+    <>
+      <Header />
+      <Routes>
+        {/**************  Start public Route *********************/}
+        <Route path="/" element={<Index />} />
+
+        {/***************  End public Route  **********************/}
+
+        {/**************** Start Private Route *********************/}
+        {/* <Route path="/*" element={<PrivateOutlet />}>
+              <Route path="demo" element={<Demo />} />
+            </Route> */}
+        {/****************** End Private Route  *********************/}
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
